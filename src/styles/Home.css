@@ -1,0 +1,27 @@
+h1 {
+    /* font-family: "League Spartan"; */
+    width: 80%;
+    margin: 0 auto;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+}
+
+.dark {
+    color: darkslateblue;
+}
+
+#fp-nav ul li:hover a.active span,
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span {
+  background-color: #B6FFCE;
+}
+
+.intro {
+    width: 35%;
+    margin: 2% 0 0 10%;
+    font-family: "League Spartan";
+    font-size: 20px;
+    line-height: 22px;
+}

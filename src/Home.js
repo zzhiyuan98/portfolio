@@ -1,5 +1,8 @@
 import ReactFullpage from "@fullpage/react-fullpage";
-import "./Home.css";
+import "@fontsource/league-spartan";
+import "./styles/Home.css";
+import Navbar from "./Navbar";
+import ContactForm from "./ContactForm";
 
 function Home() {
     return (
@@ -9,49 +12,27 @@ function Home() {
         navigation={true}
         navigationPosition={"left"}
         scrollingSpeed={1000} /* Options here */
-        sectionsColor={["#7868E6", "#363062", "#EDEEF7", "#B8B5FF"]}
+        sectionsColor={["#7868E6", "#0F044C", "#EDEEF7", "#B8B5FF"]}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
-                <nav>
-                    <ul className="nav_links">
-                        <li className="nav_item" onClick={() => fullpageApi.moveTo(2)}>ABOUT</li>
-                        <li className="nav_item" onClick={() => fullpageApi.moveTo(3)}>WORK</li>
-                        <li className="nav_item" onClick={() => fullpageApi.moveTo(4)}>CONTACT</li>
-                    </ul>
-                </nav>
-                <h1>I'm Zhiyuan bringing You Programming and Design from the Future</h1>
+                <Navbar fullpageApi={fullpageApi} curPage={1}/>
+                <h1>I'm Zhiyuan, a Frontend Developer & UX Designer based in Shanghai.</h1>
               </div>
               <div className="section">
-                <nav>
-                    <ul className="nav_links">
-                        <li className="nav_item current">ABOUT</li>
-                        <li className="nav_item">WORK</li>
-                        <li className="nav_item">CONTACT</li>
-                    </ul>
-                </nav>
-                <h1>ABOUT</h1>
+                <Navbar fullpageApi={fullpageApi} curPage={2}/>
+                <h1>WORK</h1>
               </div>
               <div className="section">
-                <nav>
-                    <ul className="nav_links dark">
-                        <li className="nav_item">ABOUT</li>
-                        <li className="nav_item current">WORK</li>
-                        <li className="nav_item">CONTACT</li>
-                    </ul>
-                </nav>
-                <h1 className="dark">WORK</h1>
+                <Navbar fullpageApi={fullpageApi} curPage={3}/>
+                <h1  className="dark">Me, Myself & I</h1>
+                <p className="intro dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
               </div>
               <div className="section">
-                <nav>
-                    <ul className="nav_links dark">
-                        <li className="nav_item">ABOUT</li>
-                        <li className="nav_item">WORK</li>
-                        <li className="nav_item current">CONTACT</li>
-                    </ul>
-                </nav>
+                <Navbar fullpageApi={fullpageApi} curPage={4}/>
                 <h1>CONTACT</h1>
+                <ContactForm />
               </div>
             </ReactFullpage.Wrapper>
           );

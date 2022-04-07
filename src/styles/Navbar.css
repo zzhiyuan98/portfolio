@@ -1,0 +1,23 @@
+.nav_item {
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style-type: none;
+    color: white;
+    padding: 0 40px;
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+}
+
+.current {
+    font-weight: bold;
+}
+
+.dark {
+    color: darkslateblue;
+}
